@@ -43,5 +43,5 @@ export default {
       app: { bundleId, launchArguments: ['-AppleLocale', 'en_US', '-AppleLanguages', '(en)'] },
     },
   ],
-  workers: 1,
+  workers: 2,
 } satisfies E2EConfig;

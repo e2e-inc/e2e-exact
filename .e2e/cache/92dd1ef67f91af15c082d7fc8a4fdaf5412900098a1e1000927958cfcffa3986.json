@@ -1,6 +1,6 @@
 {
   "schemaVersion": "trace-1",
-  "createdAt": "2026-11-09T14:03:08.341Z",
+  "createdAt": "2026-11-09T14:31:11.381Z",
   "payload": {
     "actions": [
       {
@@ -97,7 +97,7 @@
       "provider": "gateway",
       "model": "openai/gpt-6-luna-fast"
     },
-    "summary": "Added The Hobbit by J.R.R. Tolkien with 310 pages and selected Reading before saving. The book appears in the selected Reading filter (0% · page 0 of 310).",
+    "summary": "Added “The Hobbit” by J.R.R. Tolkien with 310 pages and selected Reading. Verified it appears in the Reading filter at 0% (page 0 of 310).",
     "startPath": "dev.e2e.shelf / Library",
     "endPath": "dev.e2e.shelf / Library",
     "endAnchors": [
@@ -117,7 +117,7 @@
       {
         "role": "link",
         "name": "The Hobbit J.R.R. Tolkien 0% · page 0 of 310",
-        "testId": "book-1794232981313.49174d77"
+        "testId": "book-1794234664586.947477a"
       },
       {
         "role": "text",
@@ -155,7 +155,7 @@
         "testId": "library-count"
       }
     ],
-    "endWaitMs": 12536,
+    "endWaitMs": 11890,
     "keyedBy": {
       "cacheSchema": "trace-1",
       "policyVersion": "conservative/6",
