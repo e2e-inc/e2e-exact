@@ -13,7 +13,7 @@ The app is Exact's `apps/shelf`, minus its camera, barcode, NFC, widget and Siri
 
 - **`app.contract`** is the whole UI. It says what each thing is and leaves the look to the platform. On iOS a `header` becomes the navigation bar, a `tablist` the tab bar or a segmented control, the add route a sheet, and the remove `dialog` the system alert. On the web it's a page.
 - **`app.ts`** answers the data: the library is one JSON file in the app's storage, seeded with three books. Discover reads [Open Library](https://openlibrary.org/developers/api).
-- **`app.test.contract`** is Exact's own test language, run with `bun exact.mjs test web` or `test ios`.
+- **`tests/shelf.e2e.ts`** is the one test file for both platforms.
 
 Every `testId` in the contract becomes `data-testid` on the web and the `accessibilityIdentifier` on iOS. So `screen.getByTestId('add-book')` finds the same button on both.
 
@@ -56,7 +56,17 @@ npx e2e run --target web
 npx e2e run --target ios
 ```
 
-Without `--target`, both run, in about 80 seconds and under a cent. The web target serves the release build on port 8765 (`npm run preview`), or reuses one already running. With more than one simulator booted, set `IOS_DEVICE`.
+Without `--target`, both run, on two workers. The web target serves the release build on port 8765 (`npm run preview`), or reuses one already running. With more than one simulator booted, set `IOS_DEVICE`.
+
+### Replay cache
+
+The replay cache in `.e2e/cache/` is committed. It holds the recorded actions of each agent step, one entry per test and target. So the agent tests replay without model calls, and fall back to the agent only when the screen no longer matches. Add `--no-cache` to make fresh model calls:
+
+```bash
+npx e2e run --no-cache
+```
+
+When the app changes and the agent has to take a step over, the run records it again: commit the changed entries with the change that caused them. `npx e2e cache ls` lists the entries. See [Caching](https://e2e.com/docs/cache).
 
 ### Where iOS reads differently
 
@@ -74,7 +84,6 @@ A test written against the web can fail on iOS for reasons a person using VoiceO
 | `npm run web` | Exact's dev loop in the browser |
 | `npm run ios` | Build, install and open the app on an iOS simulator |
 | `npm run preview` | Build the release web app and serve it on port 8765 |
-| `npm test` | Run `app.test.contract` on the web |
 | `npm run test:e2e` | Run the e2e tests on web and iOS |
 | `npm run test:e2e:web` | Run the e2e tests on the web |
 | `npm run test:e2e:ios` | Run the e2e tests on iOS |
