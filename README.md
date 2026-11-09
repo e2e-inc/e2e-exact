@@ -87,3 +87,18 @@ A test written against the web can fail on iOS for reasons a person using VoiceO
 | `npm run test:e2e` | Run the e2e tests on web and iOS |
 | `npm run test:e2e:web` | Run the e2e tests on the web |
 | `npm run test:e2e:ios` | Run the e2e tests on iOS |
+
+## About e2e
+
+<a href="https://e2e.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/e2e-logo-white.png">
+    <img src="docs/e2e-logo-black.png" alt="e2e" width="160">
+  </picture>
+</a>
+
+[e2e](https://e2e.com) is an open source end-to-end testing framework for web and mobile apps, made by [TesterArmy](https://tester.army). Describe a goal in natural language and an agent drives the app to reach it. Check the result with locators and assertions in the same test. A verified agent step is recorded, and later runs replay it with no model calls until the app changes.
+
+- [Docs](https://e2e.com/docs)
+- [More examples](https://e2e.com/examples)
+- [GitHub](https://github.com/tester-army/e2e)
