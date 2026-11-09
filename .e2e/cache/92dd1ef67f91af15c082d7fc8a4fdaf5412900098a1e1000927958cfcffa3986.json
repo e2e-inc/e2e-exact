@@ -1,0 +1,170 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-09T14:03:08.341Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap button \"Add Book\"",
+        "target": {
+          "role": "button",
+          "name": "Add Book",
+          "testId": "add-book",
+          "selector": "id=add-book"
+        }
+      },
+      {
+        "name": "type",
+        "summary": "type \"The Hobbit\" into textbox \"Title\"",
+        "target": {
+          "role": "textbox",
+          "name": "Title",
+          "testId": "add-title",
+          "placeholder": "Middlemarch",
+          "selector": "id=add-title"
+        },
+        "value": "The Hobbit"
+      },
+      {
+        "name": "type",
+        "summary": "type \"J.R.R. Tolkien\" into textbox \"Author\"",
+        "target": {
+          "role": "textbox",
+          "name": "Author",
+          "testId": "add-author",
+          "placeholder": "Optional",
+          "selector": "id=add-author"
+        },
+        "value": "J.R.R. Tolkien"
+      },
+      {
+        "name": "type",
+        "summary": "type \"310\" into textbox \"Pages\"",
+        "target": {
+          "role": "textbox",
+          "name": "Pages",
+          "testId": "add-pages",
+          "placeholder": "Optional",
+          "selector": "id=add-pages"
+        },
+        "value": "310"
+      },
+      {
+        "name": "tap",
+        "summary": "tap tab \"Reading\" in \"Want to Read\"",
+        "target": {
+          "role": "tab",
+          "name": "Reading",
+          "testId": "add-status-reading",
+          "selector": "id=add-status-reading",
+          "within": "Want to Read"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"Save\"",
+        "target": {
+          "role": "button",
+          "name": "Save",
+          "testId": "add-save",
+          "selector": "id=add-save"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap tab \"Reading\"",
+        "target": {
+          "role": "tab",
+          "name": "Reading",
+          "testId": "filter-reading",
+          "selector": "id=filter-reading"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "tests/shelf.e2e.ts::Shelf%2C%20by%20the%20agent::adds%20a%20book%20it%20is%20told%20about",
+      "targetId": "ios",
+      "instructionDigest": "a489f630e466c87dac20e237039e9a5e654c610b9fd602f27c0b44b25808a955",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "gateway",
+      "model": "openai/gpt-6-luna-fast"
+    },
+    "summary": "Added The Hobbit by J.R.R. Tolkien with 310 pages and selected Reading before saving. The book appears in the selected Reading filter (0% · page 0 of 310).",
+    "startPath": "dev.e2e.shelf / Library",
+    "endPath": "dev.e2e.shelf / Library",
+    "endAnchors": [
+      {
+        "role": "tab",
+        "name": "All",
+        "testId": "filter-all"
+      },
+      {
+        "role": "tab",
+        "name": "Reading",
+        "testId": "filter-reading",
+        "states": [
+          "selected"
+        ]
+      },
+      {
+        "role": "link",
+        "name": "The Hobbit J.R.R. Tolkien 0% · page 0 of 310",
+        "testId": "book-1794232981313.49174d77"
+      },
+      {
+        "role": "text",
+        "name": "2 of 4 books",
+        "testId": "library-count"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "tab",
+        "name": "All",
+        "testId": "filter-all",
+        "states": [
+          "selected"
+        ]
+      },
+      {
+        "role": "tab",
+        "name": "Reading",
+        "testId": "filter-reading"
+      },
+      {
+        "role": "link",
+        "name": "The Dispossessed Ursula K. Le Guin Want to Read",
+        "testId": "book-seed-3"
+      },
+      {
+        "role": "link",
+        "name": "The Left Hand of Darkness Ursula K. Le Guin Finished Rated 5 of 5",
+        "testId": "book-seed-1"
+      },
+      {
+        "role": "text",
+        "name": "3 of 3 books",
+        "testId": "library-count"
+      }
+    ],
+    "endWaitMs": 12536,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "cf99d97656bbd8c4ca2c2fe6254348623fff639ca1b20b99a45ebd69c3fccac9",
+      "platform": "ios",
+      "engineName": "mobile",
+      "engineSpiVersion": 1,
+      "appIdentity": "0e82a4937f3ca39688d59946a8594a9e71452f5c47f9e84ea884cbf3054d6fb1",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

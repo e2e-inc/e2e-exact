@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-09T14:03:18.113Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap tab \"Stats\"",
+        "target": {
+          "role": "tab",
+          "name": "Stats",
+          "testId": "tab-stats",
+          "selector": "id=tab-stats"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"More books\" in \"12 books\"",
+        "target": {
+          "role": "button",
+          "name": "More books",
+          "testId": "goal-up",
+          "selector": "id=goal-up",
+          "within": "12 books"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"More books\" in \"13 books\"",
+        "target": {
+          "role": "button",
+          "name": "More books",
+          "testId": "goal-up",
+          "selector": "id=goal-up",
+          "within": "13 books"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "tests/shelf.e2e.ts::Shelf%2C%20by%20the%20agent::raises%20the%20yearly%20goal%20on%20the%20Stats%20tab",
+      "targetId": "ios",
+      "instructionDigest": "b8fe1fe19ec6cc467fc4546d1719c424aae46dd2a8017680e6236ab29124a5e2",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "gateway",
+      "model": "openai/gpt-6-luna-fast"
+    },
+    "summary": "Opened Stats and increased the yearly reading goal from 12 to 14 books. The Stats screen now shows “14 books.”",
+    "startPath": "dev.e2e.shelf / Library",
+    "endPath": "dev.e2e.shelf / Stats",
+    "endAnchors": [
+      {
+        "role": "text",
+        "name": "Stats"
+      },
+      {
+        "role": "text",
+        "name": "Reading"
+      },
+      {
+        "role": "text",
+        "name": "Want to Read"
+      },
+      {
+        "role": "text",
+        "name": "Finished"
+      },
+      {
+        "role": "text",
+        "name": "Pages Read"
+      },
+      {
+        "role": "text",
+        "name": "Average Rating"
+      },
+      {
+        "role": "text",
+        "name": "5.0 ★"
+      },
+      {
+        "role": "text",
+        "name": "Of the finished books you rated."
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "button",
+        "name": "Add Book",
+        "testId": "add-book"
+      },
+      {
+        "role": "image",
+        "name": "Search",
+        "testId": "magnifyingglass"
+      },
+      {
+        "role": "tab",
+        "name": "All",
+        "testId": "filter-all",
+        "states": [
+          "selected"
+        ]
+      },
+      {
+        "role": "tab",
+        "name": "Reading",
+        "testId": "filter-reading"
+      },
+      {
+        "role": "tab",
+        "name": "Want",
+        "testId": "filter-want"
+      },
+      {
+        "role": "tab",
+        "name": "Finished",
+        "testId": "filter-done"
+      },
+      {
+        "role": "image",
+        "testId": "AdditionalDimmingOverlay"
+      },
+      {
+        "role": "link",
+        "name": "The Dispossessed Ursula K. Le Guin Want to Read",
+        "testId": "book-seed-3"
+      }
+    ],
+    "endWaitMs": 11706,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "cf99d97656bbd8c4ca2c2fe6254348623fff639ca1b20b99a45ebd69c3fccac9",
+      "platform": "ios",
+      "engineName": "mobile",
+      "engineSpiVersion": 1,
+      "appIdentity": "0e82a4937f3ca39688d59946a8594a9e71452f5c47f9e84ea884cbf3054d6fb1",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

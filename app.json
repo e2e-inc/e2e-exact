@@ -1,0 +1,28 @@
+{
+  "$schema": "../../.t3/worktrees/exact/t3-3b857e64/scripts/app.schema.json",
+  "name": "Shelf",
+  "short_name": "Shelf",
+  "id": "dev.e2e.shelf",
+  "start_url": "/",
+  "display": "standalone",
+  "app": {
+    "id": "dev.e2e.shelf",
+    "name": "Shelf"
+  },
+  "host": {
+    "web": {},
+    "ios": {
+      "minimumOS": "17.0",
+      "deviceFamily": [
+        "iphone",
+        "ipad"
+      ]
+    }
+  },
+  "deploy": {
+    "store": {
+      "web": "0",
+      "ios": "0"
+    }
+  }
+}

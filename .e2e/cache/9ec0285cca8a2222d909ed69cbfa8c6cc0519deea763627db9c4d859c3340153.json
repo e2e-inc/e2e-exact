@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "trace-1",
+  "createdAt": "2026-11-09T14:02:09.856Z",
+  "payload": {
+    "actions": [
+      {
+        "name": "tap",
+        "summary": "tap tab \"Stats\"",
+        "target": {
+          "role": "tab",
+          "name": "Stats",
+          "testId": "tab-stats"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"More books\" in \"Yearly Goal\"",
+        "target": {
+          "role": "button",
+          "name": "More books",
+          "testId": "goal-up",
+          "within": "Yearly Goal"
+        }
+      },
+      {
+        "name": "tap",
+        "summary": "tap button \"More books\" in \"Yearly Goal\"",
+        "target": {
+          "role": "button",
+          "name": "More books",
+          "testId": "goal-up",
+          "within": "Yearly Goal"
+        }
+      }
+    ],
+    "executor": {
+      "name": "e2e-default-agent",
+      "version": "2"
+    },
+    "recordedFor": {
+      "testId": "tests/shelf.e2e.ts::Shelf%2C%20by%20the%20agent::raises%20the%20yearly%20goal%20on%20the%20Stats%20tab",
+      "targetId": "web",
+      "instructionDigest": "b8fe1fe19ec6cc467fc4546d1719c424aae46dd2a8017680e6236ab29124a5e2",
+      "paramsDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "callIndex": 0,
+      "agent": "default"
+    },
+    "recordedBy": {
+      "provider": "gateway",
+      "model": "openai/gpt-6-luna-fast"
+    },
+    "summary": "Opened Stats and increased the yearly reading goal from 12 to 14 books. The Stats screen now shows “14 books” and “13 to go.”",
+    "startPath": "/",
+    "endPath": "/stats",
+    "endAnchors": [
+      {
+        "role": "heading",
+        "name": "Stats"
+      },
+      {
+        "text": "Pages Read"
+      },
+      {
+        "text": "Average Rating"
+      },
+      {
+        "text": "5.0 ★",
+        "testId": "avg-rating"
+      },
+      {
+        "text": "Of the finished books you rated."
+      },
+      {
+        "text": "Yearly Goal"
+      },
+      {
+        "text": "14 books",
+        "testId": "goal"
+      },
+      {
+        "role": "button",
+        "name": "Fewer books",
+        "testId": "goal-down"
+      }
+    ],
+    "goneAnchors": [
+      {
+        "role": "heading",
+        "name": "Library"
+      },
+      {
+        "role": "button",
+        "name": "Add Book",
+        "testId": "add-book"
+      },
+      {
+        "role": "searchbox",
+        "name": "Search title or author",
+        "testId": "search",
+        "placeholder": "Search"
+      },
+      {
+        "text": "All"
+      },
+      {
+        "text": "Want"
+      },
+      {
+        "text": "The Dispossessed",
+        "testId": "book-title-seed-3"
+      },
+      {
+        "text": "Ursula K. Le Guin"
+      },
+      {
+        "text": "Delete"
+      }
+    ],
+    "endWaitMs": 11646,
+    "keyedBy": {
+      "cacheSchema": "trace-1",
+      "policyVersion": "conservative/6",
+      "project": "cf99d97656bbd8c4ca2c2fe6254348623fff639ca1b20b99a45ebd69c3fccac9",
+      "platform": "web",
+      "engineName": "web",
+      "engineSpiVersion": 1,
+      "appIdentity": "b2e9a9fed86bd0b5a665a20dcc46185fb85d4777426d7bdeaae249754b4dcfbe",
+      "agentContextDigest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

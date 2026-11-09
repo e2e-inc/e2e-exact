@@ -1,0 +1,24 @@
+{
+  "name": "e2e-exact",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "web": "bun exact.mjs web",
+    "ios": "bun exact.mjs ios --run",
+    "build": "bun exact.mjs web-build --out dist",
+    "start": "bun exact.mjs serve dist",
+    "preview": "bun exact.mjs web-build --out dist && bun exact.mjs serve dist --port 8765",
+    "test": "bun exact.mjs test web",
+    "test:e2e": "e2e run",
+    "test:e2e:web": "e2e run --target web",
+    "test:e2e:ios": "e2e run --target ios"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@e2e-dev/mobile": "^0.12.6",
+    "@e2e-dev/web": "^0.15.5",
+    "ai": "^7.0.0",
+    "e2e": "^0.23.0",
+    "zod": "^4.1.8"
+  }
+}
