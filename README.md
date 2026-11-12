@@ -101,4 +101,4 @@ A test written against the web can fail on iOS for reasons a person using VoiceO
 
 - [Docs](https://e2e.com/docs)
 - [More examples](https://e2e.com/examples)
-- [GitHub](https://github.com/tester-army/e2e)
+- [GitHub](https://github.com/e2e-inc/e2e)
